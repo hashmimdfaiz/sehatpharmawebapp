@@ -1,0 +1,400 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Customer Details</title>
+    <link rel="manifest" href="{% static '/manifest.json' %}">
+    <meta name="theme-color" content="#999999">
+    <link rel="apple-touch-icon" href="{% static '/images/logo.png' %}">
+
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+    }
+    
+    html {
+        overflow-x: hidden;
+    }
+    
+    body {
+        /* display: flex; */
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    header img {
+        margin: 0px 0px 30px 0px;
+        width: 360px;
+        height: 80px;
+    }
+    
+    .container {
+        background-color: orangered;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-size: 25px;
+        color: greenyellow;
+        padding: 0px 0px 10px 0px;
+    }
+    
+    .container .upper .alert {
+        background: red;
+        font-weight: 600;
+    }
+    
+    .container .upper h1 {
+        padding: 10px 0px;
+    }
+    
+    .container .down form input[type='text'] {
+        width: 300px;
+        font-size: 25px;
+        padding: 2px 10px;
+        border-radius: 10px;
+        border: grey 2px solid;
+        outline: cyan 2px solid;
+        margin: 10px;
+    }
+    
+    .container table {
+        border: 2px solid grey;
+        padding: 10px;
+        font-size: 20px;
+        color: green;
+        margin: 10px auto;
+        background-color: cyan;
+    }
+    
+    .container table tr th {
+        width: 100%;
+        border: 2px solid grey;
+        color: indigo;
+        padding: 10px;
+    }
+    
+    .container table tr td {
+        text-align: left;
+        padding: 10px;
+        border: 2px solid grey;
+    }
+    
+    .container form {
+        background: #000;
+        color: yellow;
+    }
+    
+    .container form input {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+    
+    .container form button {
+        width: 100px;
+        padding: 2px;
+        font-size: 20px;
+        margin: 10px 0px 20px 0px;
+        border: cyan 2px solid;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    .container .down form div {
+        width: 30%;
+        text-align: left;
+        margin: 0px auto;
+        padding: 10px;
+    }
+    
+    .container .down form div input[type='checkbox'] {
+        margin-right: 10px;
+    }
+    
+    .container .down form div i {
+        font-size: 30px;
+        color: yellow;
+        margin-right: 10px;
+    }
+    
+    footer {
+        background-color: darkblue;
+        color: white;
+        width: 100%;
+    }
+    
+    footer .up,
+    footer .down {
+        display: flex;
+        margin: 0px auto;
+    }
+    
+    footer .up .one,
+    footer .down .one {
+        width: 50%;
+        padding-left: 30px;
+    }
+    
+    footer .up .one,
+    footer .up .two,
+    footer .down .one,
+    footer .down .two {
+        margin: 10px 0px;
+    }
+    /* responsive */
+    
+    @media screen and (max-width: 1203px) {
+        .container .down form div {
+            width: 50% !important;
+        }
+    }
+    
+    @media screen and (max-width: 728px) {
+        .container .down form div {
+            width: 70% !important;
+        }
+    }
+    
+    @media screen and (max-width: 728px) {
+        .container table {
+            font-size: 15px;
+        }
+        footer {
+            font-size: 15px !important;
+        }
+        footer .up .one,
+        footer .down .one {
+            /* width: 50%; */
+            padding-left: 0px !important;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        .container {
+            font-size: 20px;
+        }
+        .container .down form div input[type='checkbox'] {
+            width: 15px !important;
+            height: 15px !important;
+        }
+        .container .down form div i {
+            font-size: 20px !important;
+        }
+        footer {
+            font-size: 13px !important;
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        .container {
+            font-size: 15px;
+        }
+        .container table {
+            /* width: 60% !important; */
+            font-size: 12px !important;
+        }
+        footer {
+            font-size: 10px !important;
+        }
+    }
+    
+    @media screen and (max-width: 415px) {
+        .container {
+            font-size: 13px;
+        }
+        .container table {
+            font-size: 10px !important;
+        }
+        footer {
+            font-size: 9px !important;
+        }
+    }
+    
+    @media screen and (max-width: 360px) {
+        header img {
+            width: 300px !important;
+            height: 60px !important;
+        }
+        .container {
+            font-size: 13px;
+        }
+        .container table {
+            font-size: 7px !important;
+        }
+        .container .down form input[type='text'] {
+            width: 250px;
+            font-size: 15px;
+        }
+        footer {
+            font-size: 9px !important;
+        }
+    }
+    
+    @media screen and (max-width: 345px) {
+        footer {
+            font-size: 7px !important;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <img src="{% static '/fatehbhailogo.png' %}" alt="My image">
+
+    </header>
+    <div class="container">
+        <div class="upper">
+            <h1>Enter the Customer ID</h1>
+            {% if message %}
+            <div class="alert alert-danger" role="alert">
+                {{message}}
+            </div>
+            {% endif %}
+        </div>
+        <div class="down">
+            <form action="/" method="POST">
+                {% csrf_token %}
+                <input type="text" name="cosid" value="{{id}}" id="" placeholder="Enter ID">
+                <br>
+            </form>
+            {% if customer_name and id %}
+            <form action="/sub" method="POST">
+                {% csrf_token %}
+                <div class="one">
+                    {% if value_o != 'Done' %}
+                    <input type="checkbox" name="one">
+                    <label for="">Visit for Queries.</label> {% else %}
+                    <i class="fa fa-check-circle" style=""></i>
+                    <label for="">Visit for Queries done.</label> {% endif %}
+                </div>
+
+
+                <div class="two">
+                    {% if value_t != 'Done' %}
+                    <input type="checkbox" name="two">
+                    <label for="">Surgery / Consultation.</label> {% else %}
+                    <i class="fa fa-check-circle" style="font-size:30px;color: yellow;margin-right:10px;"></i>
+                    <label for="">Surgery / Consultation done.</label> {% endif %}
+                </div>
+
+
+                <div class="three">
+                    {% if value_th != 'Done' %}
+                    <input type="checkbox" name="three">
+                    <label for="">Medicine Sold.</label> {% else %}
+                    <i class="fa fa-check-circle" style="font-size:30px;color: yellow;margin-right:10px;"></i>
+                    <label for="">Medicine Sold done.</label> {% endif %}
+                </div>
+
+                <div class="four">
+                    {% if value_f != 'Done' %}
+                    <input type="checkbox" name="four">
+                    <label for="">Diagnostic Done.</label> {% else %}
+                    <i class="fa fa-check-circle" style="font-size:30px;color: yellow;margin-right:10px;"></i>
+                    <label for="">Diagnostic Done.</label> {% endif %}
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            {% endif %}
+
+        </div>
+        {% if customer_name and id %}
+        <table>
+            <tr>
+                <th colspan="3">
+                    <h1>Here is the customer details :- </h1>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Name </h2>
+
+                </td>
+                <td>
+                    <h2>{{customer_name}}</h2>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Phone Number</h2>
+                </td>
+                <td>
+                    <h2>{{customer_phone_no}}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Email ID </h2>
+                </td>
+                <td>
+                    <h2>{{customer_email}}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Location </h2>
+                </td>
+                <td>
+                    <h2>{{customer_area}}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>No. of Family members </h2>
+                </td>
+                <td>
+                    <h2>{{customer_family_mem}}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Name of the Family Member </h2>
+                </td>
+                <td>
+                    {% for cus_mem in customer_family_mem_name%}
+                    <h2>{{ forloop.counter }}) {{cus_mem|title}}.</h2>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+        {% endif %}
+    </div>
+    <footer>
+        <div class="up">
+            <div class="one">
+                <h1>Technical Support:-</h1>
+            </div>
+            <div class="two">
+                <h1>Hashmi Mohd. Faiz</h1>
+            </div>
+        </div>
+        <div class="down">
+            <div class="one">
+                <h1>Contact No. :-</h1>
+            </div>
+            <div class="two">
+                <h1>8369541464</h1>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="{% static 'js_file/index.js' %}"></script>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Customer Details</title>
+    <link rel="manifest" href="{% static '/manifest.json' %}">
+    <meta name="theme-color" content="#999999">
+    <link rel="apple-touch-icon" href="{% static '/images/logo.png' %}">
+    <title>Submit Page</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    body {
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+    }
+    
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    header img {
+        margin: 0px 0px 30px 0px;
+    }
+    
+    .container {
+        font-family: sans-serif;
+        text-align: center;
+        width: 100%;
+        background-color: orangered;
+        width: 100%;
+        height: auto;
+        font-size: 25px;
+        color: greenyellow;
+        padding: 20px 0px;
+    }
+    
+    @media screen and (max-width: 970px) {
+        header img {
+            width: 700px !important;
+            height: 120px !important;
+        }
+    }
+    
+    @media screen and (max-width: 700px) {
+        header img {
+            width: 500px !important;
+            height: 100px !important;
+        }
+        .container {
+            font-size: 15px !important;
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        header img {
+            width: 300px !important;
+            height: 70px !important;
+        }
+        .container {
+            font-size: 12px !important;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <img src="{% static '/fatehbhailogo.png' %}" alt="My image">
+
+    </header>
+    <div class="container">
+
+        <h1>
+            YOUR PAGE HAS BEEN SUBMITTED !
+        </h1>
+    </div>
+</body>
+
+</html>
