@@ -1,7 +1,8 @@
 {
     "name": "Sehat Pharma Kwik",
     "short_name": "Sehat Pharma Kwik",
-    "start_url": "/",
+    "start_url": "./",
+    "scope": ".",
     "background_color": "#6dcdb1",
     "theme_color": "#009578",
     "display": "standalone",
