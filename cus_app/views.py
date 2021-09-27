@@ -107,3 +107,6 @@ def sub_page(request):
                }
     print(dict_na)
     return render(request, 'sub_page.html',dict_na)
+
+def okay(request):
+    return HttpResponse('pretend-binary-data-here')
