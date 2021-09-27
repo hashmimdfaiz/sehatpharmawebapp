@@ -26,19 +26,19 @@ SECRET_KEY = 'django-insecure-x1r*7l0y+c=0dondz8#afse=1#rc#m7frzr6*2@@&5(%=5(n!b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://my-e-shop-new.herokuapp.com/","*","http://127.0.0.1:8000/"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'cus_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cus_app',
 ]
 
 MIDDLEWARE = [
@@ -121,14 +121,16 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 # STATICFILES_DIRS = [STATIC_ROOT]
 
 # STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 # STATIC_URL = '/static/'
-# STATICFILES_DIRS = (
-#     os.path.join(, 'static'),
-# )
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

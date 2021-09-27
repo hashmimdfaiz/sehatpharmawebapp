@@ -38,8 +38,8 @@
     
     header img {
         margin: 0px 0px 30px 0px;
-        width: 360px;
-        height: 80px;
+        /* width: 360px;
+        height: 80px; */
     }
     
     .container {
@@ -164,13 +164,24 @@
         }
     }
     
+    @media screen and (max-width: 970px) {
+        header img {
+            width: 700px !important;
+            height: 120px !important;
+        }
+    }
+    
     @media screen and (max-width: 728px) {
+        header img {
+            width: 500px !important;
+            height: 100px !important;
+        }
         .container .down form div {
             width: 70% !important;
         }
     }
     
-    @media screen and (max-width: 728px) {
+    @media screen and (max-width: 628px) {
         .container table {
             font-size: 15px;
         }
@@ -201,11 +212,14 @@
     }
     
     @media screen and (max-width: 500px) {
+        header img {
+            width: 300px !important;
+            height: 70px !important;
+        }
         .container {
             font-size: 15px;
         }
         .container table {
-            /* width: 60% !important; */
             font-size: 12px !important;
         }
         footer {
@@ -254,7 +268,7 @@
 
 <body>
     <header>
-        <img src="/static/fatehbhailogo.png" alt="My image">
+        <img src="{% static '/fatehbhailogo.png' %}" alt="My image">
 
     </header>
     <div class="container">
@@ -395,6 +409,6 @@
     </footer>
 
 </body>
-<script src="{% static '/js_file'%}"></script>
+<script src="{% static '/js_file/index.js'%}"></script>
 
 </html>
