@@ -65,8 +65,7 @@ class Index(View):
                        'value_t':value_two,
                        'value_th':value_three,
                        'value_f':value_four,
-                       'sub_mess':'Your Form Has Been Submited'
-                                  'THANK YOU'
+                       'sub_mess':'Your Form Has Been Submited. THANK YOU !'
                        }
             print(dict_na)
             return render(request, 'index.html',dict_na)
@@ -102,8 +101,8 @@ def sub_page(request):
                'value_t': value_two,
                'value_th': value_three,
                'value_f': value_four,
-               'sub_mess': 'Your Form Has Been Submited'
-                           'THANK YOU'
+               'sub_mess': 'Your Form Has Been Submited THANK YOU'
+
                }
     print(dict_na)
     return render(request, 'sub_page.html',dict_na)
