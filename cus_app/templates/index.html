@@ -23,7 +23,6 @@
     }
     
     body {
-        /* display: flex; */
         width: 100%;
         height: 100vh;
         justify-content: center;
@@ -38,8 +37,8 @@
     
     header img {
         margin: 0px 0px 30px 0px;
-        /* width: 360px;
-        height: 80px; */
+        width: 360px;
+        height: 70px;
     }
     
     .container {
@@ -94,7 +93,6 @@
     }
     
     .container form {
-        background: #000;
         color: yellow;
     }
     
@@ -119,7 +117,6 @@
         width: 30%;
         text-align: left;
         margin: 0px auto;
-        padding: 10px;
     }
     
     .container .down form div input[type='checkbox'] {
@@ -133,9 +130,10 @@
     }
     
     footer {
-        background-color: darkblue;
-        color: white;
+        margin-top: 10px;
+        color: darkblue;
         width: 100%;
+        font-size: 12px;
     }
     
     footer .up,
@@ -150,32 +148,13 @@
         padding-left: 30px;
     }
     
-    footer .up .one,
-    footer .up .two,
-    footer .down .one,
-    footer .down .two {
-        margin: 10px 0px;
-    }
-    /* responsive */
-    
     @media screen and (max-width: 1203px) {
         .container .down form div {
             width: 50% !important;
         }
     }
     
-    @media screen and (max-width: 970px) {
-        header img {
-            width: 700px !important;
-            height: 120px !important;
-        }
-    }
-    
     @media screen and (max-width: 728px) {
-        header img {
-            width: 500px !important;
-            height: 100px !important;
-        }
         .container .down form div {
             width: 70% !important;
         }
@@ -185,12 +164,8 @@
         .container table {
             font-size: 15px;
         }
-        footer {
-            font-size: 15px !important;
-        }
         footer .up .one,
         footer .down .one {
-            /* width: 50%; */
             padding-left: 0px !important;
         }
     }
@@ -206,16 +181,9 @@
         .container .down form div i {
             font-size: 20px !important;
         }
-        footer {
-            font-size: 13px !important;
-        }
     }
     
     @media screen and (max-width: 500px) {
-        header img {
-            width: 300px !important;
-            height: 70px !important;
-        }
         .container {
             font-size: 15px;
         }
@@ -392,7 +360,7 @@
     <footer>
         <div class="up">
             <div class="one">
-                <h1>Technical Support:-</h1>
+                <h1>Technical Support :-</h1>
             </div>
             <div class="two">
                 <h1>Hashmi Mohd. Faiz</h1>
