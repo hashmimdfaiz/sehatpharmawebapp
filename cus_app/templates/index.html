@@ -36,18 +36,18 @@
     }
     
     header img {
-        margin: 0px 0px 30px 0px;
+        margin: 30px 0px;
         width: 360px;
         height: 70px;
     }
     
     .container {
-        background-color: orangered;
+        background-color: greenyellow;
         width: 100%;
         height: auto;
         text-align: center;
         font-size: 25px;
-        color: greenyellow;
+        color: green;
         padding: 0px 0px 10px 0px;
     }
     
@@ -74,15 +74,15 @@
         border: 2px solid grey;
         padding: 10px;
         font-size: 20px;
-        color: green;
+        color: yellowgreen;
         margin: 10px auto;
-        background-color: cyan;
+        background-color: white;
     }
     
     .container table tr th {
         width: 100%;
         border: 2px solid grey;
-        color: indigo;
+        color: blue;
         padding: 10px;
     }
     
@@ -93,7 +93,7 @@
     }
     
     .container form {
-        color: yellow;
+        color: green;
     }
     
     .container form input {
@@ -125,25 +125,30 @@
     
     .container .down form div i {
         font-size: 30px;
-        color: yellow;
+        color: blue;
         margin-right: 10px;
     }
     
     footer {
         margin-top: 10px;
-        color: darkblue;
+        color: black;
         width: 100%;
-        font-size: 12px;
+        font-size: 10px;
+        margin-top: 40px;
     }
     
     footer .up,
     footer .down {
         display: flex;
-        margin: 0px auto;
+        /* margin: 0px auto; */
+        justify-content: center;
+        /* text-align: center; */
     }
     
     footer .up .one,
-    footer .down .one {
+    footer .up .two,
+    footer .down .one,
+    footer .down .two {
         width: 50%;
         padding-left: 30px;
     }
@@ -261,7 +266,7 @@
                     {% if value_o != 'Done' %}
                     <input type="checkbox" name="one">
                     <label for="">Visit for Queries.</label> {% else %}
-                    <i class="fa fa-check-circle" style=""></i>
+                    <i class="fa fa-check-circle"></i>
                     <label for="">Visit for Queries done.</label> {% endif %}
                 </div>
 
@@ -270,7 +275,7 @@
                     {% if value_t != 'Done' %}
                     <input type="checkbox" name="two">
                     <label for="">Surgery / Consultation.</label> {% else %}
-                    <i class="fa fa-check-circle" style="font-size:30px;color: yellow;margin-right:10px;"></i>
+                    <i class="fa fa-check-circle"></i>
                     <label for="">Surgery / Consultation done.</label> {% endif %}
                 </div>
 
@@ -279,7 +284,7 @@
                     {% if value_th != 'Done' %}
                     <input type="checkbox" name="three">
                     <label for="">Medicine Sold.</label> {% else %}
-                    <i class="fa fa-check-circle" style="font-size:30px;color: yellow;margin-right:10px;"></i>
+                    <i class="fa fa-check-circle"></i>
                     <label for="">Medicine Sold done.</label> {% endif %}
                 </div>
 
@@ -287,7 +292,7 @@
                     {% if value_f != 'Done' %}
                     <input type="checkbox" name="four">
                     <label for="">Diagnostic Done.</label> {% else %}
-                    <i class="fa fa-check-circle" style="font-size:30px;color: yellow;margin-right:10px;"></i>
+                    <i class="fa fa-check-circle"></i>
                     <label for="">Diagnostic Done.</label> {% endif %}
                 </div>
                 <button type="submit">Submit</button>
