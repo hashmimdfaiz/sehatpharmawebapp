@@ -1,4 +1,4 @@
-<!DOCTYPE html> {% load static %}
+<!DOCTYPE html> {% load static %}{% load pwa %} {% progressive_web_app_meta %}
 <html lang="en">
 
 <head>
@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Customer Details</title>
-    <link rel="manifest" href="{% static '/manifest.json' %}">
-    <meta name="theme-color" content="#999999">
-    <link rel="apple-touch-icon" href="{% static '/images/logo.png' %}">
+<!--    <link rel="manifest" href="{% static 'manifest.json' %}">-->
+<!--    &lt;!&ndash; <link rel="manifest" href="/cus_app/templates/sub_page.html"> &ndash;&gt;-->
+<!--    <meta name="theme-color" content="#999999">-->
+<!--    <link rel="apple-touch-icon" href="{% static '/images/logo.png' %}">-->
     <title>Submit Page</title>
 </head>
 <style>
@@ -80,6 +81,6 @@
         </h1>
     </div>
 </body>
-<script src="{% static '/js_file/index.js'%}"></script>
+<!--<script src="{% static '/js_file/index.js'%}"></script>-->
 
 </html>

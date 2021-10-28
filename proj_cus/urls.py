@@ -18,10 +18,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.views.generic import TemplateView
 # admin.autodiscover()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('cus_app.urls')),
+    path('',include("pwa.urls"))
     # path(r'^favicon\.ico$', include('django.views.generic.simple.redirect_to'), {'url': '/static/images/favicon.ico'}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

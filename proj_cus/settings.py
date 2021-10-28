@@ -15,6 +15,7 @@ import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+# PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'static', 'sw.js')
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-x1r*7l0y+c=0dondz8#afse=1#rc#m7frzr6*2@@&5(%=5(n!b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://my-e-shop-new.herokuapp.com/","*","http://127.0.0.1:8000/"]
+ALLOWED_HOSTS = ["https://my-e-shop-new.herokuapp.com/","*","http://127.0.0.1:8000/","http://127.0.0.1:8000/sw.js"]
 
 # Application definition
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cus_app',
+    'pwa'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +138,24 @@ STATIC_ROOT = os.path.join(BASE_DIR,'assets')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+PWA_APP_NAME = "Sehat Pharma Kwik"
+PWA_APP_DESCRIPTION = "PROGRESSIVE WEB APPLICATION OF Sehat Pharma Kwik"
+PWA_APP_THEME_COLOR = "#009578"
+PWA_APP_BACKGROUND_COLOR = "#6dcdb1"
+PWA_APP_START_URL = '/'
+PWA_APP_ICONS = [
+    {
+        "src": "/static/images/logo.png",
+        "sizes": "192x192",
+    }
+]
+PWA_APP_ICONS_APPLE = [
+    {
+        "src": "/static/images/logo1.png",
+        "sizes": "512x512",
+    }
+]
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, "sw.js")

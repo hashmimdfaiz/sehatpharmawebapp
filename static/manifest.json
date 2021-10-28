@@ -1,20 +1,17 @@
 {
-    "name": "Sehat Pharma Kwik",
+    "name": "",
     "short_name": "Sehat Pharma Kwik",
     "start_url": "/",
+    "scope": "./",
   "prefer_related_applications": true,
-    "background_color": "#6dcdb1",
-    "theme_color": "#009578",
-    "display": "standalone",
+
     "icons": [{
             "src": "/static/images/logo.png",
-            "sizes": "192x192",
             "type": "image/png",
             "purpose": "maskable any"
         },
         {
             "src": "/static/images/logo1.png",
-            "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable any"
         }

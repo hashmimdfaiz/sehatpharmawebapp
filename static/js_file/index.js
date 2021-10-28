@@ -1,5 +1,5 @@
 if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("../static/sw.js").then(registration => {
+    navigator.serviceWorker.register("/sw.js").then(registration => {
         console.log("SW Registered!");
         console.log(registration);
     }).catch(error => {
@@ -7,3 +7,12 @@ if ("serviceWorker" in navigator) {
         console.log(error);
     });
 }
+
+//navigator.serviceWorker.register('', { scope: './cus_app/templates/index.html' , 'Service-Worker-Allowed':'/'})
+//        .then(function (registration)
+//        {
+//          console.log('Service worker registered successfully');
+//        }).catch(function (e)
+//        {
+//          console.error('Error during service worker registration:', e);
+//        });
