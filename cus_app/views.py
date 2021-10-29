@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.views import View
 from .models import Customer
+from time import *
 
 # Create your views here.
 
@@ -105,6 +106,8 @@ def sub_page(request):
 
                }
     print(dict_na)
+    # return redirect("submit_page")
+    # sleep(5)
     return render(request, 'sub_page.html',dict_na)
 
 def okay(request):

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Customer Details</title>
-<!--    <link rel="manifest" href="{% static 'manifest.json' %}">-->
-<!--    <meta name="theme-color" content="#999999">-->
-<!--    <link rel="apple-touch-icon" href="{% static '/images/logo.png' %}">-->
+    <!--    <link rel="manifest" href="{% static 'manifest.json' %}">-->
+    <!--    <meta name="theme-color" content="#999999">-->
+    <!--    <link rel="apple-touch-icon" href="{% static '/images/logo.png' %}">-->
 
 </head>
 <style>
@@ -255,13 +255,13 @@
             {% endif %}
         </div>
         <div class="down">
-            <form action="/" method="POST">
+            <form action="/" method="post">
                 {% csrf_token %}
                 <input type="text" name="cosid" value="{{id}}" id="" placeholder="Enter ID">
                 <br>
             </form>
             {% if customer_name and id %}
-            <form action="/sub" method="POST">
+            <form action="/sub" method="post">
                 {% csrf_token %}
                 <div class="one">
                     {% if value_o != 'Done' %}

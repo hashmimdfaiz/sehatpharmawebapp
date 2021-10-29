@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Customer Details</title>
-<!--    <link rel="manifest" href="{% static 'manifest.json' %}">-->
-<!--    &lt;!&ndash; <link rel="manifest" href="/cus_app/templates/sub_page.html"> &ndash;&gt;-->
-<!--    <meta name="theme-color" content="#999999">-->
-<!--    <link rel="apple-touch-icon" href="{% static '/images/logo.png' %}">-->
+    <!--    <link rel="manifest" href="{% static 'manifest.json' %}">-->
+    <!--    &lt;!&ndash; <link rel="manifest" href="/cus_app/templates/sub_page.html"> &ndash;&gt;-->
+    <!--    <meta name="theme-color" content="#999999">-->
+    <!--    <link rel="apple-touch-icon" href="{% static '/images/logo.png' %}">-->
     <title>Submit Page</title>
 </head>
 <style>
@@ -48,6 +48,23 @@
         padding: 20px 0px;
     }
     
+    footer form {
+        margin: 50px 0px 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    footer form input {
+        padding: 10px 20px;
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 900;
+        border: orangered 2px solid;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
     @media screen and (max-width: 700px) {
         header img {
             width: 500px !important;
@@ -80,6 +97,11 @@
             YOUR PAGE HAS BEEN SUBMITTED ! <br> Thank You !
         </h1>
     </div>
+    <footer>
+        <form action="/">
+            <input type="submit" value="Back to Home Page <<<<">
+        </form>
+    </footer>
 </body>
 <!--<script src="{% static '/js_file/index.js'%}"></script>-->
 
